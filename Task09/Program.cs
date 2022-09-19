@@ -34,7 +34,7 @@ int MaxDigit (int num)
     return secondDigi;
 }
 
-bool IsEqualDigits(int num1, int num2)
+bool IsEqualDigits(int num1, int num2);
 int maxDigit = MaxDigit(number);
 System.Console.WriteLine($"Наибольшая цифра числа {number} -> {maxDigit}");
 
