@@ -8,33 +8,41 @@
 
 
 int number = new Random().Next(10, 100);
-int firstDigi = number / 10;
-int secondDigi = number % 10;
+int firstDigit = number / 10;
+int secondDigit = number % 10;
 
-// System.Console.WriteLine($"Случайное число из отрезка 10 - 99 -> {number}");
-// if (firstDigi == secondDigi)
+System.Console.WriteLine($"Случайное число из отрезка 10 - 99 -> {number}");
+// if (firstDigit == secondDigit)
 // {
 //     System.Console.WriteLine("Цифры одинаковые");
 // }
-// else if(firstDigi > secondDigi) Console.WriteLine($"Наибольшая цифра числа {number} -> {firstDigi}");
-// else Console.WriteLine($"Наибольшая цифра числа {number} -> {secondDigi}");
+// else if(firstDigit > secondDigit) Console.WriteLine($"Наибольшая цифра числа {number} -> {firstDigit}");
+// else Console.WriteLine($"Наибольшая цифра числа {number} -> {secondDigit}");
 
 // int maxDigit = 0;  // обычный цикл
-// if(firstDigi > secondDigi) maxDigit = firstDigi;
-// else maxDigit = secondDigi;
+// if(firstDigit > secondDigit) maxDigit = firstDigi;
+// else maxDigit = secondDigit;
 
-//int max = firstDigi > secondDigi ? firstDigi : secondDigi; // Тернальный оператор
+//int max = firstDigit > secondDigit ? firstDigit : secondDigit; // Тернальный оператор
 
 
 int MaxDigit (int num)
 {
-    int firstDigi = num / 10;
-    int secondDigi = num % 10;
-    if(firstDigi > secondDigi) return firstDigi;
-    return secondDigi;
+    int firstDigit = num / 10;
+    int secondDigit = num % 10;
+    //if(firstDigit > secondDigit) return firstDigit;
+    //return secondDigit;
+    if (firstDigit == secondDigit) return -1;
+    return firstDigit > secondDigit ? firstDigit : secondDigit;
 }
 
-bool IsEqualDigits(int num1, int num2);
+bool IsEqualDigits(int num1, int num2)
+{
+    return num1 == num2;
+}
 int maxDigit = MaxDigit(number);
-System.Console.WriteLine($"Наибольшая цифра числа {number} -> {maxDigit}");
+string result = maxDigit != -1 ? maxDigit.ToString() : "Цифры одинаковые";
+System.Console.WriteLine($"Наибольшая цифра числа {number} -> {result}");
+
+//1:05:38
 
