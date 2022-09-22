@@ -32,11 +32,11 @@ int MaxDigit (int num)
     int secondDigit = num % 10;
     //if(firstDigit > secondDigit) return firstDigit;
     //return secondDigit;
-    if (firstDigit == secondDigit) return -1;
+    if (IsEqualDigits(firstDigit, secondDigit)) return -1;
     return firstDigit > secondDigit ? firstDigit : secondDigit;
 }
 
-bool IsEqualDigits(int num1, int num2)
+bool IsEqualDigits(int num1, int num2)   // метод для проверки равности чисел. Вместо num1, num2 нужно подставить firstDigit и secondDigit.
 {
     return num1 == num2;
 }
@@ -44,5 +44,5 @@ int maxDigit = MaxDigit(number);
 string result = maxDigit != -1 ? maxDigit.ToString() : "Цифры одинаковые";
 System.Console.WriteLine($"Наибольшая цифра числа {number} -> {result}");
 
-//1:05:38
+
 
