@@ -12,6 +12,4 @@ int number = new Random().Next(100, 1000);
 Console.WriteLine("Случайное число из промежутка (от 100 до 999) = " + number);
 int number0 = number / 100;
 int number2 = number % 10;
-Console.WriteLine($"Результат {number0}{number2}");
-
-// 1-23
+Console.WriteLine($"Искомое число: {number0}{number2}");
