@@ -10,6 +10,16 @@
 
 int number = new Random().Next(100, 1000);
 Console.WriteLine("Случайное число из промежутка (от 100 до 999) = " + number);
-int number0 = number / 100;
-int number2 = number % 10;
-Console.WriteLine($"Искомое число: {number0}{number2}");
+
+
+int DeleteSecontNumber(int num)
+{
+    int num0 = num / 100;
+    int num1 = num % 10;
+    int res = num0 * 10 + num1;
+    return res;
+}
+
+int result = DeleteSecontNumber(number);
+
+Console.WriteLine($"Искомое число: {result}");
