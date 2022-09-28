@@ -12,19 +12,20 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int QuantityNumber(int num)
 {
-    int quantity = 0;
+    int count = 0;
     while (num > 0)
     {
         num = num / 10;
-        quantity++;
+        count++;
     }
-    return quantity;
+    return count;
 
 }
 
-int quantityNumber = QuantityNumber(number);
+
 if (number > 0)
 {
+    int quantityNumber = QuantityNumber(number);
     Console.WriteLine($"В числе {number} => {quantityNumber} цифр.");
 }
 
