@@ -14,7 +14,7 @@ int[] array = new int[sizeArray];
 void RandomNumbers(int[] arr)
 {
     Random rnd = new Random();
-    for (int i = 0; i < arr.Length - 1; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
         arr[i] = rnd.Next(0, 2);   
     }
