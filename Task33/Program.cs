@@ -33,20 +33,24 @@ void PrintArray(int[] array)
     
 }
 
-void SearchNumber(int[] array, int num)
+bool SearchNumber(int[] array, int num)
 {
-    int coincidence = 0;
+    bool coincidence = false;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] == num) coincidence += 1;
+        if (array[i] == num)
+        {
+            coincidence = true;
+            break;
+        }
     }
-
-    if (coincidence > 0) Console.WriteLine($"Заданное число {num} присутствует в массиве.");
-    else Console.WriteLine($"Заданное число {num} отсутствует в массиве.");
+    return coincidence;
 }
 
 int[] arr = CreateArrayRndInt(sizeArray);
 PrintArray(arr);
+if (SearchNumber(arr, number)) Console.WriteLine($"Заданное число {number} присутствует в массиве.");
+else Console.WriteLine($"Заданное число {number} отсутствует в массиве.");
 SearchNumber(arr, number);
 
 
