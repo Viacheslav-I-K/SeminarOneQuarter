@@ -60,7 +60,7 @@ int GreaterZero()
 }
 
 Console.WriteLine("Введите числа без пробелов и знаков. Допускается только знак минус.");
-Console.WriteLine("Для окончания ввода, при запросе ввода числа нажмите (Enter).");
+Console.WriteLine("Для окончания ввода, при запросе ввода числа, без ввода информации нажмите (Enter).");
 
 int numbersGreaterZero = GreaterZero();
 Console.WriteLine($"{numbersGreaterZero} чисел больше нуля.");
