@@ -43,9 +43,12 @@ void PrintArray(double[] array)
     }
 }
 
+if (numberK1 == numberK2 || numberB1 == numberB2) Console.WriteLine("Прямые параллельные.");
+else
+{
 double[] intersectionCoordinates = IntersectionCoordinates(numberK1, numberB1, numberK2, numberB2);
 PrintArray(intersectionCoordinates);
-
+}
 
 
 
