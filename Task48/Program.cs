@@ -9,7 +9,7 @@ m = 3, n = 4.
 2 3 4 5
 */
 
-int[,] createMatrixRndInt(int rows, int columns, int min, int max)
+int[,] createMatrixSumIndex(int rows, int columns)
 {
         int [,] matrix = new int[rows, columns];
 
@@ -39,6 +39,6 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int[,] array2D = createMatrixRndInt(3, 4, -100, 101);
+int[,] array2D = createMatrixSumIndex(3, 4);
 PrintMatrix(array2D);
 
