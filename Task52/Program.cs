@@ -28,8 +28,8 @@ int[,] matrix = CreaterMatrixRndInt(sizeRows, sizeColumns, minNumber, maxNumber)
 PrintMatrix(matrix);
 Console.WriteLine("Среднее арифмитическое:");
 
-int[] sumElemMatrix = SumElemColumnsMatrix(matrix);
-PrintArray(sumElemMatrix);
+double[] arithmeticMeanElemMatrix = ArithmeticMeanElemColumnsMatrix(matrix);
+PrintArray(arithmeticMeanElemMatrix);
 
 
 
@@ -64,21 +64,22 @@ void PrintMatrix(int[,] matrix)
 }
 
 
-int[] SumElemColumnsMatrix(int[,] matrix)
+double[] ArithmeticMeanElemColumnsMatrix(int[,] matrix)
 {
-    int[] sumElemColumns = new int[matrix.GetLength(1)];
+    double[] arithmeticMean = new double[matrix.GetLength(1)];
     for (int i = 0; i < matrix.GetLength(1); i++)
     {
         for (int j = 0; j < matrix.GetLength(0); j++)
         {
-            sumElemColumns[i] += matrix[j, i];
+            arithmeticMean[i] += matrix[j, i];
         }
+        arithmeticMean[i] = Math.Round((arithmeticMean[i] / matrix.GetLength(0)),1 ,MidpointRounding.ToZero);
     }
-    return sumElemColumns;
+    return arithmeticMean;
 }
 
 
-void PrintArray(int[] array)
+void PrintArray(double[] array)
 {
     Console.Write("|");
     for (int i = 0; i < array.Length; i++)
