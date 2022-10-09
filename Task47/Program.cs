@@ -35,7 +35,7 @@ double[,] CreaterMatrixRndDouble(int rows, int columns, double min, double max)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = Math.Round(rnd.NextDouble() * ((max - min) + min), 1, MidpointRounding.ToZero);
+            matrix[i, j] = Math.Round(rnd.NextDouble() * (max - min) + min, 1, MidpointRounding.ToZero);
         }
     }
     return matrix;
