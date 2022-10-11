@@ -45,7 +45,6 @@ int[,] CreaterMatrixRndInt(int rows, int columns, int min, int max)
 
 void ReplaceRows(int[,] matrix)
 {
-    //int[,] result = new int[matrix.GetLength(0), matrix.GetLength(1)];
     int temp = default;
     for (int j = 0; j < matrix.GetLength(1); j++) // 0 - rows  0 
     {
