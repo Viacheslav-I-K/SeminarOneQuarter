@@ -30,7 +30,7 @@ PrintMatrix(matrix2D);
 
 Console.WriteLine();
 
-int[,] newMatrix = SortirovkaMatrix(matrix2D);
+int[,] newMatrix = SortingMatrix(matrix2D);
 PrintMatrix(newMatrix);
 
 
@@ -64,7 +64,7 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int[,] SortirovkaMatrix(int[,] matrix)
+int[,] SortingMatrix(int[,] matrix)
 {
     int[,] newMatr = new int[matrix.GetLength(0), matrix.GetLength(1)];
 
