@@ -13,20 +13,11 @@ int numberM = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число n для функции Аккермана А(m, n): ");
 int numberN = Convert.ToInt32(Console.ReadLine());
 
-int Ackerman(int m, int n)
+int Ackerman(int numM, int numN)
 {
-    if (m == 0)
-    {
-        return n + 1;
-    }
-    else if (m > 0 && n == 0)
-    {
-        return Ackerman(m - 1, 1);
-    }
-    else
-    {
-        return Ackerman(m - 1, Ackerman(m, n - 1));
-    }
+    if (numM == 0) return numN + 1;
+
+    return numM > 0 && numN == 0 ? Ackerman(numM - 1, 1) : Ackerman(numM - 1, Ackerman(numM, numN - 1));
 }
 
 int asckerman = Ackerman(numberM, numberN);
