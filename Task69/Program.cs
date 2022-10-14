@@ -20,8 +20,9 @@ Console.WriteLine(sqrNumber);
 int SqrNumbers(int numA, int numB)
 {
     int sqrNum = numA;
-    if (numB != 1) sqrNum *= SqrNumbers(numA, numB - 1);
-    return sqrNum;
+    if (numB == 0) return 1;
+    return sqrNum *= SqrNumbers(numA, numB - 1);
+    //return numB == 0 ? 1 : numA * SqrNumbers(numA, numB - 1); // Тернальный способ
 }
 
 
