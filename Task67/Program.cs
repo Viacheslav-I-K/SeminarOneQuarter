@@ -8,9 +8,11 @@
 
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int sunNumber = SumDigital(number);
 
+int sunNumber = SumDigital(number);
 Console.WriteLine(sunNumber);
+
+
 
 int SumDigital(int num)
 {
